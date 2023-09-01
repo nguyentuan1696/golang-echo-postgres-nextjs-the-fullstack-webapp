@@ -13,6 +13,7 @@ Tech stack:
 - Echo
 - Postgres
 - Redis, Redis search
+- Gitlab CICD
 
 
 ## Frontend
