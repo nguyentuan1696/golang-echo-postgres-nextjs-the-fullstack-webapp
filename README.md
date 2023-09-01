@@ -24,4 +24,4 @@ Tech stack:
 - Typescript
 
 ## Note
-- [Postman API](https://cloudy-desert-809916.postman.co/workspace/thichlab~b94e07c3-542d-4d9e-b9c3-679484abf323/collection/10580195-e293473b-652f-40ba-a10a-243734089c83?action=share&creator=10580195)
+- [Postman API](https://www.postman.com/cloudy-desert-809916/workspace/public-api/collection/10580195-3b65e719-21fc-4e83-9fd0-f5e2f4e34bca?action=share&creator=10580195)
