@@ -1,0 +1,30 @@
+{
+  "Debug": true,
+  "Server": {
+    "Address": ":9091"
+  },
+  "Log": {
+    "Path": "/var/log/thichlab",
+    "Prefix": "backend-docs",
+    "Description": "Must set write-permission for /var/log/thichlab"
+  },
+  "Postgres": {
+    "Host": "34.124.177.152",
+    "Port": 5432,
+    "Username": "thichlab",
+    "Password": "mysecretpassword",
+    "Database": "docs"
+  },
+  "Redis": {
+    "Host": "34.124.177.152:6379",
+    "Password": "OzOgLwWfYLxu4tC",
+    "DB": "0",
+    "PoolSize": 10000,
+    "MinIdleConns": 10
+  },
+  "RedisSearch": {
+    "Host": "redis-13289.c295.ap-southeast-1-1.ec2.cloud.redislabs.com:13289",
+    "Password": "LUmAqBGmWfRKcNnYbiKcIcgJQWLcS6MP",
+    "IndexName": "search-client-2"
+  }
+}

@@ -1,0 +1,6 @@
+- https://github.com/shadcn/ui/blob/main/apps/www/components/page-header.tsx
+- [fix loi next theme](https://github.com/pacocoursey/next-themes/issues/169#issuecomment-1539498884)
+- https://www.vnteach.com/
+- https://github.com/fingerprintjs/fingerprintjs
+- obfuscating 
+- https://stackoverflow.com/questions/66744765/how-to-hash-css-class-names-in-nextjs/69166434#69166434
