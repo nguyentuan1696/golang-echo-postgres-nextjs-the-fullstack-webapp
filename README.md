@@ -21,4 +21,3 @@ Tech stack:
 - Nextjs 13 App
 - Tailwind (shadcnui)
 - Typescript
-- Redis, Redis search
