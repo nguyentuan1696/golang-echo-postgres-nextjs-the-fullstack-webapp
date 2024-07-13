@@ -6,16 +6,18 @@ require (
 	github.com/RediSearch/redisearch-go v1.1.1
 	github.com/TwiN/go-away v1.6.10
 	github.com/gomodule/redigo v1.8.3
+	github.com/google/uuid v1.1.2
 	github.com/gosimple/slug v1.13.1
+	github.com/jasonlvhit/gocron v0.0.1
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/labstack/echo/v4 v4.10.2
 	github.com/lib/pq v1.2.0
 	github.com/matoous/go-nanoid/v2 v2.0.0
+	github.com/rabbitmq/amqp091-go v1.10.0
 	github.com/redis/go-redis/v9 v9.0.2
 	github.com/rifflock/lfshook v0.0.0-20180920164130-b9218ef580f5
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/viper v1.15.0
-	golang.org/x/exp v0.0.0-20230626212559-97b1e661b5df
 )
 
 require (

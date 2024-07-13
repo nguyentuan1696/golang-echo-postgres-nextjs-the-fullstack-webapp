@@ -13,6 +13,7 @@ import (
 	"thichlab-backend-docs/infrastructure/logger"
 	"thichlab-backend-docs/infrastructure/repository"
 	"thichlab-backend-docs/infrastructure/search"
+	"thichlab-backend-docs/module/account"
 	"thichlab-backend-docs/module/docs"
 	"thichlab-backend-docs/module/healthcheck"
 )
@@ -52,7 +53,7 @@ func main() {
 	postgresUserName := viper.GetString("Postgres.UserName")
 	postgresPassword := viper.GetString("Postgres.Password")
 	postgresDB := viper.GetString("Postgres.Database")
-	postgresUri := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
+	postgresUri := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=verify-full",
 		postgresHost, postgresPort, postgresUserName, postgresPassword, postgresDB)
 	sqlDBContext, sqlxDBContext := repository.InitializeConnection(postgresUri)
 	defer func(sqlDBContext *sql.DB) {
@@ -112,6 +113,9 @@ func main() {
 
 	// Init docs module
 	docs.Initialize(e, sqlDBContext, sqlxDBContext, cacheClient, searchClient)
+
+	// Init account module
+	account.Initialize(e, sqlDBContext, sqlxDBContext, cacheClient)
 
 	//------------------------------------
 	// START APPLICATION

@@ -7,4 +7,5 @@ const (
 	TableCategory string = "category"
 	TablePostTag  string = "post_tag"
 	TableSource   string = "source"
+	TableAccount  string = "accounts"
 )
