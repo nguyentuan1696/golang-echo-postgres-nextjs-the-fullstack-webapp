@@ -5,6 +5,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"regexp"
 	"strings"
+	"thichlab-backend-docs/dto"
 )
 
 var emailPattern = regexp.MustCompile(`[a-zA-Z.\-_][a-zA-Z.\-_0-9]{4,}@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z0-9]+\.)+[a-zA-Z]{2,}))`)
@@ -79,4 +80,19 @@ func UsernameValidator(username string) error {
 		return fmt.Errorf("Username cannot have spaces")
 	}
 	return nil
+}
+
+func Sign(token *dto.TokenDetails, signer string) (string, string, error) {
+	signedAt, err := token.AccessToken.SignedString([]byte(signer))
+	if err != nil {
+		return "", "", err
+	}
+	token.SignedAccessToken = signedAt
+
+	signedRt, err := token.RefreshToken.SignedString([]byte(signer))
+	if err != nil {
+		return "", "", err
+	}
+	token.SignedRefreshToken = signedRt
+	return signedAt, signedRt, nil
 }

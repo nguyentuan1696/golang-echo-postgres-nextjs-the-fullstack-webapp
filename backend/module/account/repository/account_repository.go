@@ -20,3 +20,14 @@ func (repository *AccountRepository) DBAccountInsert(ctx context.Context, args *
 
 	return nil
 }
+
+func (repository *AccountRepository) GetInfoUserByUsername(ctx context.Context, username string) (*dto.AccountRegister, error) {
+	r := new(dto.AccountRegister)
+	query := fmt.Sprintf("select id, username, email, password from accounts where username = '%s'", username)
+	err := repository.Postgres.SQLxDBContext.GetContext(ctx, r, query)
+	if err != nil {
+		repository.Postgres.HandleError(err, query)
+		return nil, err
+	}
+	return r, nil
+}

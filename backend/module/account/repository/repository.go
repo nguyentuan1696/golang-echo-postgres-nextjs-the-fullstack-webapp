@@ -20,4 +20,5 @@ func NewAccountRepository(dbContext *sql.DB, sqlxDBContext *sqlx.DB) IAccountRep
 
 type IAccountRepository interface {
 	DBAccountInsert(ctx context.Context, args *dto.AccountRegister) error
+	GetInfoUserByUsername(ctx context.Context, username string) (*dto.AccountRegister, error)
 }

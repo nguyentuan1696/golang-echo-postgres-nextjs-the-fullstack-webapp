@@ -1,6 +1,29 @@
 package dto
 
-import "github.com/google/uuid"
+import (
+	"github.com/golang-jwt/jwt"
+	"github.com/google/uuid"
+)
+
+type TokenDetails struct {
+	AccessToken        *jwt.Token
+	RefreshToken       *jwt.Token
+	SignedAccessToken  string
+	SignedRefreshToken string
+	Username           string
+}
+
+type AccountLoginRes struct {
+	UserId       uuid.UUID `json:"user_id"`
+	Username     string    `json:"username"`
+	AccessToken  string    `json:"access_token"`
+	RefreshToken string    `json:"refresh_token"`
+}
+
+type AccountLoginReq struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
 
 type AccountRegister struct {
 	Id        uuid.UUID `json:"id" db:"id"`

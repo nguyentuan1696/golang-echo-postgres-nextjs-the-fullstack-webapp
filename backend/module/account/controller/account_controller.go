@@ -9,6 +9,10 @@ import (
 	"thichlab-backend-docs/infrastructure/util"
 )
 
+func (controller *AccountController) LoginAccount(c echo.Context) error {
+	return controller.StatusOkResponse(c, nil)
+}
+
 func (controller *AccountController) CreateAccount(c echo.Context) error {
 	var err error
 	ctx := c.Request().Context()

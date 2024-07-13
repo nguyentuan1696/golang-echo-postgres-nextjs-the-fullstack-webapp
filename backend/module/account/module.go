@@ -36,5 +36,6 @@ func Initialize(e *echo.Echo, dbContext *sql.DB, sqlxDBContext *sqlx.DB, cache c
 func initRoute(e *echo.Echo) {
 	route := e.Group("/account/api/v1/")
 	route.POST("signup", mAccountController.CreateAccount)
+	route.POST("login", mAccountController.LoginAccount)
 
 }
