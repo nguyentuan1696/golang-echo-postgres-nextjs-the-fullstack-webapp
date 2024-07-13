@@ -19,3 +19,5 @@ go.work
 .idea/
 .vscode
 /var/
+
+config.json
