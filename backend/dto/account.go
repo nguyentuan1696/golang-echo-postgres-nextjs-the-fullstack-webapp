@@ -3,6 +3,7 @@ package dto
 import (
 	"github.com/golang-jwt/jwt"
 	"github.com/google/uuid"
+	"time"
 )
 
 type TokenDetails struct {
@@ -11,13 +12,15 @@ type TokenDetails struct {
 	SignedAccessToken  string
 	SignedRefreshToken string
 	Username           string
+	RtExpires          time.Duration
+	AtExpires          time.Duration
 }
 
 type AccountLoginRes struct {
-	UserId       uuid.UUID `json:"user_id"`
-	Username     string    `json:"username"`
-	AccessToken  string    `json:"access_token"`
-	RefreshToken string    `json:"refresh_token"`
+	UserId       uuid.UUID  `json:"user_id"`
+	Username     string     `json:"username"`
+	AccessToken  *jwt.Token `json:"access_token"`
+	RefreshToken *jwt.Token `json:"refresh_token"`
 }
 
 type AccountLoginReq struct {
