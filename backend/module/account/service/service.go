@@ -22,4 +22,5 @@ func NewAccountService(repository repository.IAccountRepository, cache cache.Cli
 
 type IAccountService interface {
 	AccountInsert(ctx context.Context, args *dto.AccountRegister) (*dto.AccountRegisterRes, error)
+	AccountLogin(ctx context.Context, args *dto.AccountLoginReq) (string, string, error)
 }
