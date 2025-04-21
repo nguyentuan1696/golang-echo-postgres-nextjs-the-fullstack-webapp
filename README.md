@@ -1,29 +1,88 @@
-# golang-echo-postgres-nextjs-the-fullstack-webapp
+# Golang Echo API Template 
 
-## Features
-- Product Management
-- Search product
-- List products by category
-- ...
+A production-ready template for building scalable REST APIs using Golang Echo framework with dependency injection principles.
 
-## Backend
+## Architecture Overview
+- Three-Tier Architecture:
+  - API Layer - Echo handlers for HTTP request/response handling
+  - Business Layer - Services for business logic and data processing
+  - Data Layer - Repositories for database operations
+- Dependency Injection with Wire for better testability and maintainability
+- Interface-based Design for loose coupling
+- Feature-based Package Organization
+- Middleware-based Request Processing
+  - Authentication
+  - Request Validation
+  - Error Handling
+  - Logging
+- Centralized Configuration Management
+- Database Integration:
+  - PostgreSQL for persistent storage
+  - Redis for caching and search functionality
 
-Tech stack:
-- Golang
-- Echo
-- Postgres
-- Redis, Redis search
-- Gitlab CICD
+## Core Features
+- Graceful Shutdown Handling
+- API Documentation with Swagger
+- Structured Logging
+- Centralized Error Handling
+- Request Validation
+- Database Migrations
 
+## Technical Stack
 
-## Frontend
+### Backend (Golang)
+- Echo Framework - High performance web framework
+- Wire - Compile-time Dependency Injection
+- SQLX - Database Access Library
+- PostgreSQL - Primary Database
+- Log - Structured Logging
+- Validator - Request Validation
+- Swagger - API Documentation
+- Docker - Containerization
 
-Tech stack:
-- Nextjs 13 App
-- Tailwind (shadcnui)
-- Typescript
+### Frontend (Next.js)
+- Next.js 13 (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui Components
+- React Query
+- Axios
 
-## Note
-- [Postman API](https://www.postman.com/cloudy-desert-809916/workspace/public-api/collection/10580195-3b65e719-21fc-4e83-9fd0-f5e2f4e34bca?action=share&creator=10580195)
-
-- Handle gracefull shutdown
+## Project Structure
+```tree
+.
+├── cmd/
+│   └── api/                    # Application entry point
+│       └── main.go            # Main application setup
+├── internal/
+│   ├── model/                 # Data models & DTOs
+│   │   └── product.go        
+│   ├── repository/            # Database operations
+│   │   └── product/
+│   │       ├── interface.go   # Repository interface
+│   │       └── postgres.go    # PostgreSQL implementation
+│   ├── service/               # Business logic
+│   │   └── product/
+│   │       ├── interface.go   # Service interface
+│   │       └── service.go     # Service implementation
+│   ├── handler/               # HTTP handlers
+│   │   └── product/
+│   │       └── handler.go     # Product endpoints
+│   └── middleware/            # Custom middlewares
+├── pkg/
+│   ├── config/               # Configuration management
+│   │   └── config.go
+│   ├── database/             # Database connections
+│   │   └── postgres.go
+│   ├── logger/               # Logging setup
+│   │   └── logger.go
+│   ├── validator/            # Request validation
+│   │   └── validator.go
+│   └── server/              # HTTP server setup
+│       └── server.go
+├── config/                   # Configuration files
+│   ├── app.yaml             # Application config
+│   └── database.yaml        # Database config
+└── migrations/              # Database migrations
+    └── postgres/
+```
