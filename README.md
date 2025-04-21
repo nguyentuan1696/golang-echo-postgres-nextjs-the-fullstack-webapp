@@ -5,11 +5,10 @@ A ready-to-use template that accelerates API development while maintaining scala
 
 ## Features
 - **Modular Architecture**
-  - Handler modules for HTTP request handling
-  - Service modules for business logic
-  - Repository modules for data persistence
-  - Middleware modules for cross-cutting concerns
-
+  - Controller for HTTP request handling
+  - Service  for business logic
+  - Repository for data persistence
+  
 - **Database Integration**
   - PostgreSQL integration with SQLX
   - Database migrations support
