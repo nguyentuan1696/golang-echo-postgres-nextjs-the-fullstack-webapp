@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"thichlab-backend-slowpoke/core/entity"
+	"go-api-starter/core/entity"
 	"time"
 
 	"github.com/google/uuid"

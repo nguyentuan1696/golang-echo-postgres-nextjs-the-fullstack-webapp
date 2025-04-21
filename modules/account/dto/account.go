@@ -1,7 +1,7 @@
 package dto
 
 import (
-	"thichlab-backend-slowpoke/core/dto"
+	"go-api-starter/core/dto"
 
 	"github.com/google/uuid"
 )

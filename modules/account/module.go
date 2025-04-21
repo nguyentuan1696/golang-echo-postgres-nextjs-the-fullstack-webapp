@@ -1,13 +1,13 @@
 package account
 
 import (
-	"thichlab-backend-slowpoke/core/cache"
-	"thichlab-backend-slowpoke/core/database"
-	"thichlab-backend-slowpoke/core/middleware"
-	"thichlab-backend-slowpoke/modules/account/controller"
-	"thichlab-backend-slowpoke/modules/account/repository"
-	"thichlab-backend-slowpoke/modules/account/router"
-	"thichlab-backend-slowpoke/modules/account/service"
+	"go-api-starter/core/cache"
+	"go-api-starter/core/database"
+	"go-api-starter/core/middleware"
+	"go-api-starter/modules/account/controller"
+	"go-api-starter/modules/account/repository"
+	"go-api-starter/modules/account/router"
+	"go-api-starter/modules/account/service"
 
 	"github.com/labstack/echo/v4"
 )

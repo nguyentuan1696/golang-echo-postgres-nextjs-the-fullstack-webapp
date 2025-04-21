@@ -3,9 +3,9 @@ package service
 import (
 	"context"
 
-	"thichlab-backend-slowpoke/core/errors"
-	"thichlab-backend-slowpoke/modules/account/dto"
-	"thichlab-backend-slowpoke/modules/account/mapper"
+	"go-api-starter/core/errors"
+	"go-api-starter/modules/account/dto"
+	"go-api-starter/modules/account/mapper"
 	"time"
 
 	"github.com/google/uuid"

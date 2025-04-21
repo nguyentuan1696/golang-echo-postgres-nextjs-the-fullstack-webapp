@@ -4,7 +4,7 @@ import (
 	"strings"
 
 	"errors"
-	"thichlab-backend-slowpoke/core/config"
+	"go-api-starter/core/config"
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"

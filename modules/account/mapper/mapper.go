@@ -1,8 +1,8 @@
 package mapper
 
 import (
-	"thichlab-backend-slowpoke/modules/account/dto"
-	"thichlab-backend-slowpoke/modules/account/entity"
+	"go-api-starter/modules/account/dto"
+	"go-api-starter/modules/account/entity"
 )
 
 func ToUserEntity(user *dto.CreateAccountRequest) *entity.User {

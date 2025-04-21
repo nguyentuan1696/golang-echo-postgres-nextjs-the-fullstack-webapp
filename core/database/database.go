@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"go-api-starter/core/logger"
 	"sync"
-	"thichlab-backend-slowpoke/core/logger"
 	"time"
 
 	"github.com/jmoiron/sqlx"
@@ -117,5 +117,3 @@ func (d *Database) NamedQueryContext(ctx context.Context, query string, arg any)
 func (d *Database) NamedExecContext(ctx context.Context, query string, arg any) (sql.Result, error) {
 	return d.sqlx.NamedExecContext(ctx, query, arg)
 }
-
-

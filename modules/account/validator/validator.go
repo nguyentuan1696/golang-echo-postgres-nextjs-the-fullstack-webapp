@@ -1,9 +1,9 @@
 package validator
 
 import (
-	"thichlab-backend-slowpoke/core/utils"
-	"thichlab-backend-slowpoke/core/validation"
-	"thichlab-backend-slowpoke/modules/account/dto"
+	"go-api-starter/core/utils"
+	"go-api-starter/core/validation"
+	"go-api-starter/modules/account/dto"
 )
 
 func ValidateCreateAccount(dataRequest dto.CreateAccountRequest) *validation.ValidationResult {

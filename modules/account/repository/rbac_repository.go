@@ -2,8 +2,8 @@ package repository
 
 import (
 	"context"
-	"thichlab-backend-slowpoke/core/logger"
-	"thichlab-backend-slowpoke/modules/account/entity"
+	"go-api-starter/core/logger"
+	"go-api-starter/modules/account/entity"
 
 	"github.com/google/uuid"
 )

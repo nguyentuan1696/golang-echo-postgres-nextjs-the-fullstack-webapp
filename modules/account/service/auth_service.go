@@ -3,12 +3,12 @@ package service
 import (
 	"context"
 	"fmt"
-	"thichlab-backend-slowpoke/core/constants"
-	"thichlab-backend-slowpoke/core/errors"
-	"thichlab-backend-slowpoke/core/logger"
-	"thichlab-backend-slowpoke/core/utils"
-	"thichlab-backend-slowpoke/modules/account/dto"
-	"thichlab-backend-slowpoke/modules/account/mapper"
+	"go-api-starter/core/constants"
+	"go-api-starter/core/errors"
+	"go-api-starter/core/logger"
+	"go-api-starter/core/utils"
+	"go-api-starter/modules/account/dto"
+	"go-api-starter/modules/account/mapper"
 	"time"
 
 	"github.com/google/uuid"

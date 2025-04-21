@@ -1,12 +1,12 @@
 package middleware
 
 import (
+	"go-api-starter/core/controller"
+	"go-api-starter/core/logger"
+	"go-api-starter/core/utils"
+	"go-api-starter/modules/account/service"
 	"net/http"
 	"strings"
-	"thichlab-backend-slowpoke/core/controller"
-	"thichlab-backend-slowpoke/core/logger"
-	"thichlab-backend-slowpoke/core/utils"
-	"thichlab-backend-slowpoke/modules/account/service"
 
 	"github.com/google/uuid"
 	"github.com/labstack/echo/v4"

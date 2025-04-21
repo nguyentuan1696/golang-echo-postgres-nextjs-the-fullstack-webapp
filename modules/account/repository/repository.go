@@ -4,9 +4,9 @@ import (
 	"context"
 	"database/sql"
 	"errors"
+	"go-api-starter/core/logger"
+	"go-api-starter/modules/account/entity"
 	"strings"
-	"thichlab-backend-slowpoke/core/logger"
-	"thichlab-backend-slowpoke/modules/account/entity"
 
 	"github.com/google/uuid"
 )
@@ -134,5 +134,3 @@ func (r *AccountRepository) GetUsers(ctx context.Context, pageNumber, pageSize i
 		PageSize:    pageSize,
 	}, nil
 }
-
-

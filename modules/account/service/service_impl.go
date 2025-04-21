@@ -2,10 +2,10 @@ package service
 
 import (
 	"context"
-	"thichlab-backend-slowpoke/core/cache"
-	"thichlab-backend-slowpoke/core/errors"
-	"thichlab-backend-slowpoke/modules/account/dto"
-	"thichlab-backend-slowpoke/modules/account/repository"
+	"go-api-starter/core/cache"
+	"go-api-starter/core/errors"
+	"go-api-starter/modules/account/dto"
+	"go-api-starter/modules/account/repository"
 
 	"github.com/google/uuid"
 )
@@ -35,7 +35,6 @@ type IAccountService interface {
 
 	// Admin API
 	GetUsers(ctx context.Context, pageNumber, pageSize int) (*dto.PaginatedUsersResponse, *errors.AppError)
-	GetUserById(ctx context.Context, userId string) (*dto.UserResponse, *errors.AppError)
 
 	// Rbac API
 	CreateRole(ctx context.Context, role *dto.CreateRoleRequest) *errors.AppError

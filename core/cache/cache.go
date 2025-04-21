@@ -2,11 +2,11 @@ package cache
 
 import (
 	"context"
+	"go-api-starter/core/logger"
 	"sync"
-	"thichlab-backend-slowpoke/core/logger"
 	"time"
 
-	"thichlab-backend-slowpoke/core/constants"
+	"go-api-starter/core/constants"
 
 	"github.com/redis/go-redis/v9"
 )

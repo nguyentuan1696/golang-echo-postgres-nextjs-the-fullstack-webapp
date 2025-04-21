@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"thichlab-backend-slowpoke/core/utils"
-	"thichlab-backend-slowpoke/modules/account/dto"
-	"thichlab-backend-slowpoke/modules/account/validator"
+	"go-api-starter/core/utils"
+	"go-api-starter/modules/account/dto"
+	"go-api-starter/modules/account/validator"
 
 	"github.com/labstack/echo/v4"
 )

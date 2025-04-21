@@ -1,11 +1,10 @@
 package controller
 
 import (
-	"thichlab-backend-slowpoke/core/utils"
+	"go-api-starter/core/utils"
 
 	"github.com/labstack/echo/v4"
 )
-
 
 func (controller *AccountController) LockUser(c echo.Context) error {
 	return nil
@@ -33,14 +32,3 @@ func (controller *AccountController) GetUsers(c echo.Context) error {
 	return controller.SuccessResponse(c, resultGetUsers, "Get users successfully")
 
 }
-
-func (controller *AccountController) GetUser(c echo.Context) error {
-	ctx := c.Request().Context()
-	userId := c.Param("userId")
-	resultGetUser, err := controller.accountService.GetUserById(ctx, userId)
-	if err != nil {
-		return controller.InternalServerError("Internal server error", err)
-	}
-	return controller.SuccessResponse(c, resultGetUser, "Get user success")
-}
-

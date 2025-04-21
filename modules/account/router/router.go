@@ -1,8 +1,8 @@
 package router
 
 import (
-	"thichlab-backend-slowpoke/core/middleware"
-	"thichlab-backend-slowpoke/modules/account/controller"
+	"go-api-starter/core/middleware"
+	"go-api-starter/modules/account/controller"
 
 	"github.com/labstack/echo/v4"
 )
@@ -46,7 +46,6 @@ func (r *AccountRouter) Setup(e *echo.Echo, authMiddleware *middleware.Middlewar
 	users := admin.Group("/users")
 	users.Use(authMiddleware.PermissionMiddleware("read:users"))
 	users.GET("", r.controller.GetUsers)
-	users.GET("/:id", r.controller.GetUser)
 
 	// User admin routes
 	userAdmin := users.Group("")

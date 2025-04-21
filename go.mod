@@ -1,4 +1,4 @@
-module thichlab-backend-slowpoke
+module go-api-starter
 
 go 1.24.2
 

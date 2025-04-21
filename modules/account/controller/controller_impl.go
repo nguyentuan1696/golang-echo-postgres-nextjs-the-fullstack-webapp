@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"thichlab-backend-slowpoke/core/controller"
-	"thichlab-backend-slowpoke/modules/account/service"
+	"go-api-starter/core/controller"
+	"go-api-starter/modules/account/service"
 )
 
 type AccountController struct {

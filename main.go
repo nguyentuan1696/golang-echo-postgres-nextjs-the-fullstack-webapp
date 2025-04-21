@@ -1,8 +1,8 @@
 package main
 
 import (
-	"thichlab-backend-slowpoke/core/logger"
-	"thichlab-backend-slowpoke/core/server"
+	"go-api-starter/core/logger"
+	"go-api-starter/core/server"
 )
 
 func main() {

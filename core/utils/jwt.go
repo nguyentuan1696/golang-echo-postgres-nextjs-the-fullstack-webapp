@@ -2,7 +2,7 @@ package utils
 
 import (
 	"fmt"
-	"thichlab-backend-slowpoke/core/config"
+	"go-api-starter/core/config"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
