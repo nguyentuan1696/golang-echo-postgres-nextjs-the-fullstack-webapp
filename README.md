@@ -1,88 +1,57 @@
-# Golang Echo API Template 
+# Go API Starter
 
-A production-ready template for building scalable REST APIs using Golang Echo framework with dependency injection principles.
+## Overview
+A ready-to-use template that accelerates API development while maintaining scalability through modular design and industry-standard practices.
 
-## Architecture Overview
-- Three-Tier Architecture:
-  - API Layer - Echo handlers for HTTP request/response handling
-  - Business Layer - Services for business logic and data processing
-  - Data Layer - Repositories for database operations
-- Dependency Injection with Wire for better testability and maintainability
-- Interface-based Design for loose coupling
-- Feature-based Package Organization
-- Middleware-based Request Processing
-  - Authentication
-  - Request Validation
-  - Error Handling
-  - Logging
-- Centralized Configuration Management
-- Database Integration:
-  - PostgreSQL for persistent storage
-  - Redis for caching and search functionality
+## Features
+- **Modular Architecture**
+  - Handler modules for HTTP request handling
+  - Service modules for business logic
+  - Repository modules for data persistence
+  - Middleware modules for cross-cutting concerns
 
-## Core Features
-- Graceful Shutdown Handling
-- API Documentation with Swagger
-- Structured Logging
-- Centralized Error Handling
-- Request Validation
-- Database Migrations
+- **Database Integration**
+  - PostgreSQL integration with SQLX
+  - Database migrations support
+  - Repository pattern implementation
+  - Transaction management
+
+- **API Features**
+  - RESTful endpoints
+  - Request validation
+  - Error handling
+  - Response formatting
+
+- **Security & Performance**
+  - Authentication middleware
+  - Request rate limiting
+  - Graceful shutdown
+  - Logging system
+
+- **Development Tools**
+  - Environment configuration
+  - Docker containerization
+
 
 ## Technical Stack
 
-### Backend (Golang)
-- Echo Framework - High performance web framework
-- Wire - Compile-time Dependency Injection
-- SQLX - Database Access Library
-- PostgreSQL - Primary Database
-- Log - Structured Logging
-- Validator - Request Validation
-- Swagger - API Documentation
-- Docker - Containerization
+### Core
+- Go 1.21+
+- Echo Framework - HTTP router and middleware
+- Viper - Configuration management
 
-### Frontend (Next.js)
-- Next.js 13 (App Router)
-- TypeScript
-- Tailwind CSS
-- shadcn/ui Components
-- React Query
-- Axios
+### Database & Storage
+- PostgreSQL 15+ - Primary database
+- SQLX - SQL toolkit
+- golang-migrate - Database migrations
 
-## Project Structure
-```tree
-.
-├── cmd/
-│   └── api/                    # Application entry point
-│       └── main.go            # Main application setup
-├── internal/
-│   ├── model/                 # Data models & DTOs
-│   │   └── product.go        
-│   ├── repository/            # Database operations
-│   │   └── product/
-│   │       ├── interface.go   # Repository interface
-│   │       └── postgres.go    # PostgreSQL implementation
-│   ├── service/               # Business logic
-│   │   └── product/
-│   │       ├── interface.go   # Service interface
-│   │       └── service.go     # Service implementation
-│   ├── handler/               # HTTP handlers
-│   │   └── product/
-│   │       └── handler.go     # Product endpoints
-│   └── middleware/            # Custom middlewares
-├── pkg/
-│   ├── config/               # Configuration management
-│   │   └── config.go
-│   ├── database/             # Database connections
-│   │   └── postgres.go
-│   ├── logger/               # Logging setup
-│   │   └── logger.go
-│   ├── validator/            # Request validation
-│   │   └── validator.go
-│   └── server/              # HTTP server setup
-│       └── server.go
-├── config/                   # Configuration files
-│   ├── app.yaml             # Application config
-│   └── database.yaml        # Database config
-└── migrations/              # Database migrations
-    └── postgres/
-```
+### Development & Tools
+- Docker & Docker Compose
+- Make - Build automation
+
+
+### Monitoring & Logging
+- Log - Structured logging
+
+
+
